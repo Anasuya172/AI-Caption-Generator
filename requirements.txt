@@ -6,3 +6,4 @@ torch
 ffmpeg-python
 pysrt
 numpy
+srt
