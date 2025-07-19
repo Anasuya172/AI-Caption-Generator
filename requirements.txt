@@ -3,6 +3,5 @@ moviepy
 whisper
 transformers
 torch
-soundfile
-srt
 ffmpeg-python
+pysrt
