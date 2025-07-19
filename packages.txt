@@ -1,5 +1,6 @@
-ffmpeg
-libsm6
-libxext6
-fonts-dejavu-core
-fonts-freefont-ttf
+streamlit
+whisper
+moviepy
+srt
+ffmpeg-python
+pysrt
