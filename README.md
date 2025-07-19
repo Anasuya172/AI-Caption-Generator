@@ -1,46 +1,65 @@
-This project is a Streamlit-based web application that allows you to:
-
-✅ Upload a video file.
-✅ Generate subtitles in Hindi or English using advanced AI models (OpenAI Whisper).
-✅ Burn the generated subtitles directly into the video.
-✅ Download the final video with embedded captions and the separate SRT subtitle file.
-
-It’s designed for content creators, educators, and anyone who needs quick and accurate subtitles for their videos.
+🎥 AI Caption Generator
+This project is a Streamlit-based application that:
+✅ Extracts audio from a video.
+✅ Transcribes the audio to text using OpenAI Whisper.
+✅ Generates SRT subtitle files.
+✅ Burns subtitles directly into the video using FFmpeg.
+✅ Allows downloading both the SRT file and final video.
 ✨ Features
-🎙️ Hindi Mode: Transcribes videos with Hindi audio using Whisper-large for highly accurate results.
+🎙️ Automatic Transcription: Supports Hindi and English audio using Whisper’s AI model.
 
-📝 English Mode: Transcribes videos with English audio using Whisper-large.
+🔊 Audio Extraction: Pulls audio out of your uploaded video file.
 
-🔊 Audio Extraction: Automatically extracts audio from the video before transcription.
+📝 Subtitle Generation: Creates properly timed .srt files.
 
-📜 SRT Support: Generates a standard .srt subtitle file for separate use.
+🔥 Subtitles Burn-in: Embeds captions directly into the video.
 
-📥 Download Options: Download videos with hardcoded subtitles and the standalone SRT file.
+📥 Downloads: Export the final captioned video or just the SRT.
 
-🌐 Simple Streamlit UI: Clean and user-friendly interface to make the process seamless.
+🌐 Simple Streamlit UI for user-friendly interaction.
+🛠️ Technologies Used
+OpenAI Whisper – Speech-to-text transcription.
 
-⚡ Performance Notice: Processing time depends on video length and quality. The system may take some time, so please wait and avoid turning off your computer during processing.🛠️ Technologies Used
-🤖 OpenAI Whisper for speech-to-text transcription.
+MoviePy – Audio extraction.
 
-🎥 MoviePy for audio extraction.
+FFmpeg – Subtitles burn-in.
 
-🔥 FFmpeg for burning subtitles directly into video files.
+Streamlit – Web-based app interface.
 
-🖥️ Streamlit for building the interactive UI.
+Python Libraries: whisper, moviepy, srt, subprocess, etc.
 
 🚀 How to Run
-1️⃣ Clone this repository
-git clone https://github.com/Anasuya172/video-subtitle-generator.git
-cd video-subtitle-generator
-2️⃣ Install dependencies
-pip install -r requirements.txt
-3️⃣ Install FFmpeg
-Make sure FFmpeg is installed and added to your system’s PATH. You can download it from:
-https://ffmpeg.org/download.html
-4️⃣ Run the app
-streamlit run app.py
-📁 Input and Output
-| 📂 Input                             | 🎯 Output                             |
-| ------------------------------------ | ------------------------------------- |
-| Video files (.mp4, .mkv, .mov, etc.) | 🔥 Video with **burned-in subtitles** |
-|                                      | 📜 Separate `.srt` subtitle file      |
+🖥️ Local Setup
+Clone this repository:  git clone https://github.com/<your-username>/ai-caption-generator.git
+cd ai-caption-generator
+ Install dependencies:   pip install -r requirements.txt
+  Install FFmpeg:
+
+Download FFmpeg.
+
+Add it to your system PATH.
+
+Run the app:  streamlit run app.py
+Open http://localhost:8501 in your browser.    
+☁️ Streamlit Cloud Deployment
+This project is Streamlit Cloud-ready:
+
+requirements.txt includes Python dependencies.
+
+packages.txt adds system-level libraries (like ffmpeg).
+
+Simply upload this repo to GitHub and deploy on Streamlit Cloud.
+
+📥 Inputs & Outputs
+| 📂 Input                       | 📁 Output                             |
+| ------------------------------ | ------------------------------------- |
+| Video files (.mp4, .mov, .avi) | Video with hardcoded subtitles (.mp4) |
+|                                | Subtitle file (.srt)                  |
+ ⚠️ Notes
+Transcription time depends on video length and system resources.
+
+On Streamlit Cloud, large Whisper models may not run due to memory limits.
+
+  📜 License
+This project is licensed under the MIT License.
+
