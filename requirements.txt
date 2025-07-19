@@ -1,9 +1,8 @@
 streamlit
-moviepy
+moviepy==1.0.3
 whisper
 transformers
 torch
 ffmpeg-python
-imageio
-imageio-ffmpeg
 pysrt
+numpy
