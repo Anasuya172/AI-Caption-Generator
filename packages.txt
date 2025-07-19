@@ -1,4 +1,5 @@
 ffmpeg
 libsm6
 libxext6
-libass9
+fonts-dejavu-core
+fonts-freefont-ttf
