@@ -4,4 +4,6 @@ whisper
 transformers
 torch
 ffmpeg-python
+imageio
+imageio-ffmpeg
 pysrt
